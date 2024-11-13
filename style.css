@@ -9,22 +9,69 @@ body {
   line-height: 1.5;
 }
 
+.headerBackground {
+  background-color: aliceblue;
+  width: 100%
+}
+
 .container {
   width: min(100% - 3rem, var(--container-max, 60ch));
   margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .region {
   padding-top: 3rem;
   padding-bottom: 3.6rem;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  background-color: aliceblue;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .card {
   background-color: rgba(0, 0, 0, 0.1);
+  min-width: 14rem;
+  width: 20rem;
 }
 
 @media (max-width: 600px) {
   header svg {
     display: none;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-inline: 3rem;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.navbar a:hover {
+  background-color: aliceblue;
+}
+
+.navbar a {
+  margin: 10px;
+  text-decoration: none;
+}
+
+nav {
+  background-color: antiquewhite;
+  width: 70%;
+  justify-self: center;
 }
